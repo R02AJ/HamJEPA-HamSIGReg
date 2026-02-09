@@ -5,14 +5,11 @@
 > This codebase contains code adapted from LeJEPA (and/or code that is a derivative work of LeJEPA).
 > The upstream LeJEPA license is Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 >
-> Therefore, any use of the code in this repository - including univariate and multivariate variants, and by extension SIGReg - must comply with CC BY-NC 4.0 (attribution, non-commercial use, etc.).
+> Therefore, any use of that code in this repository - namely the univariate and multivariate folders and by extenstion sigreg.py - must comply with CC BY-NC 4.0 (attribution, non-commercial use, etc.). An alternative to sigreg.py is provided in sigreg_wrapper.py, however that file was not used in the paper.
 >
 > - License text: Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 > - https://creativecommons.org/licenses/by-nc/4.0/
 >
-> This repository is intended for non-commercial research and education only.
->
-> Not legal advice. If you need certainty about compliance, talk to your institution's counsel/legal team.
 
 ## What this repo is
 
