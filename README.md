@@ -175,6 +175,7 @@ This is research code and may have rough edges. If training becomes unstable, ch
 
 If you use LeJEPA or code from this repository in your research, please cite the original work:
 
+```bibtex
 @misc{balestriero2025lejepaprovablescalableselfsupervised,
       title={LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics}, 
       author={Randall Balestriero and Yann LeCun},
