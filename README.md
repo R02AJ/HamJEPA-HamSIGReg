@@ -5,10 +5,11 @@
 > This codebase contains code adapted from LeJEPA (and/or code that is a derivative work of LeJEPA).
 > The upstream LeJEPA license is Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 >
-> Therefore, any use of that code in this repository - namely the univariate and multivariate folders and by extenstion sigreg.py - must comply with CC BY-NC 4.0 (attribution, non-commercial use, etc.). An alternative to sigreg.py is provided in sigreg_wrapper.py, however that file was not used in the paper.
+> Therefore, any use of that code in this repository - namely the univariate and multivariate folders and by extension sigreg.py - must comply with CC BY-NC 4.0 (attribution, non-commercial use, etc.). An alternative to sigreg.py is provided in sigreg_wrapper.py, however that file was not used in the paper.
 >
 > - License text: Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 > - https://creativecommons.org/licenses/by-nc/4.0/
+> - LeJEPA repository: https://github.com/galilai-group/lejepa
 >
 
 ## What this repo is
@@ -169,3 +170,17 @@ This is research code and may have rough edges. If training becomes unstable, ch
 - mixed precision / backend settings
 - HJEPA dynamics knobs (`residual_scale`, `base_coeff`, `dt`, `steps`, `damping`)
 - regularizer strength / floor settings
+
+## Acknowledgments & References
+
+If you use LeJEPA or code from this repository in your research, please cite the original work:
+
+@misc{balestriero2025lejepaprovablescalableselfsupervised,
+      title={LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics}, 
+      author={Randall Balestriero and Yann LeCun},
+      year={2025},
+      eprint={2511.08544},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2511.08544}, 
+}
