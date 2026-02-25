@@ -1,0 +1,16 @@
+# Install torch/torchvision from the appropriate PyTorch index for your CUDA/CPU setup.
+# Example (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# Core
+numpy>=1.24
+matplotlib>=3.7
+PyYAML>=6.0
+omegaconf>=2.3
+Pillow>=10.0
+torch>=2.1
+torchvision>=0.1
+
+# Optional (used by scripts/tests)
+kagglehub>=0.3
+pytest>=7.0
+
