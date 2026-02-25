@@ -241,7 +241,7 @@ These tests are deliberately **model-agnostic**: you can replace “Euler” wit
 
 ### 0.2 Energy surface view (GIF)
 
-![Energy surface drift](assets/visuals/energy_surface_sigreg_vs_hamjepa.gif)
+![Energy surface drift](assets/visuals/energy_surface_sigreg_vs_hamjepa.mp4)
 
 **What it is:** Same underlying idea, but embedded on the **energy surface** \(H(q,p)\) as a 3D plot: the trajectory is plotted as a curve in \((q,p,H)\).
 
