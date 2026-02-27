@@ -1,0 +1,74 @@
+seed: 42
+
+data:
+  root: ./data
+  batch_size: 512
+  num_workers: 8
+  drop_last: true
+  num_global_views: 2
+  num_local_views: 0
+
+model:
+  encoder_mode: tokens
+  token_layer: layer3
+  token_d_f: 32
+  encoder_stem: cifar
+  embed_dim: 2048
+  proj_hidden: 2048
+  proj_out: 2048
+  projector_type: identity
+  split_qp: true
+
+hjepa:
+  method: leapfrog
+  steps: 2
+  dt: 0.05
+  learn_dt: false
+  hamiltonian: separable
+  hidden_dim: 256
+  depth: 2
+  residual_scale: 0.02
+  residual_scale_warmup_epochs: 10
+  base_coeff: 0.1
+  integrate_fp32: true
+
+loss:
+  match: q
+  detach_target: true
+  energy_weight: 0.0
+  bidirectional: true
+  p_weight: 0.2
+
+regularizer:
+  q_std_floor: 0.2
+  q_per_dim_target: 1.0
+  p_per_dim_target: 1.0
+  ddp_sync: true
+  q_logdet_proj_dim: 128
+  q_logdet_floor: -1.5
+  q_logdet_eps: 1.0e-4
+  q_logdet_refresh_interval: 16
+  q_pr_norm_floor: 0.12
+  q_eigmax_frac_ceiling: 0.35
+  p_logdet_proj_dim: 128
+  p_logdet_floor: -1.5
+  p_logdet_eps: 1.0e-4
+  p_logdet_refresh_interval: 16
+  p_pr_norm_floor: 0.16
+  p_eigmax_frac_ceiling: 0.30
+
+train:
+  epochs: 30
+  lr: 0.0005
+  weight_decay: 0.0005
+  warmup_epochs: 10
+  min_lr_ratio: 0.001
+  precision: bf16
+  ckpt_dir: checkpoints
+
+  lambda_budget: 0.2
+  lambda_var: 0.5
+  lambda_logdet: 0.5
+  lambda_mean: 0.05
+  grad_clip: 1.0
+  log_every: 100

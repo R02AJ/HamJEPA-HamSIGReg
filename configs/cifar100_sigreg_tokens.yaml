@@ -1,0 +1,36 @@
+seed: 42
+
+data:
+  root: ./data
+  batch_size: 512
+  num_workers: 8
+  drop_last: true
+  num_global_views: 2
+  num_local_views: 0
+
+model:
+  encoder_mode: tokens
+  token_layer: layer3
+  token_d_f: 32
+  embed_dim: 2048
+  proj_hidden: 2048
+  proj_out: 2048
+  projector_type: identity
+
+train:
+  epochs: 30
+  lr: 0.0005
+  weight_decay: 0.0005
+  lambda_reg: 0.02
+  warmup_epochs: 10
+  min_lr_ratio: 0.001
+  precision: bf16
+  h_update_interval: 10
+  h_grad_clip: 1.0
+  ckpt_dir: checkpoints
+
+regularizer:
+  type: sigreg
+  num_slices: 64
+  t_max: 3.0
+  n_points: 9
